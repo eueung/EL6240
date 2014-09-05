@@ -34,7 +34,7 @@ Komputasi Bergerak
 
 - Connected Things  
   https://speakerdeck.com/eueung/ltka-04-01a  
-  https://speakerdeck.com/eueung/ltka-04-01b
+  https://speakerdeck.com/eueung/ltka-04-01b  
   https://speakerdeck.com/eueung/ltka-04-02a  
   https://speakerdeck.com/eueung/ltka-04-02b  
   https://speakerdeck.com/eueung/ltka-04-02c  
