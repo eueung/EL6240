@@ -24,6 +24,9 @@ Referensi Lain + Tools + etc.
   https://courses.edx.org/courses/BerkeleyX/CS_CS169.1x/1T2014/info  
   https://courses.edx.org/courses/BerkeleyX/CS.169.2x/3T2013/info
 
+- Web Application Architectures  
+  https://www.coursera.org/course/webapplications
+
 Komputasi Bergerak
 --------------
 - Model dan Arsitektur Layanan Tersambung   
