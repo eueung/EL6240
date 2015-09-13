@@ -32,7 +32,7 @@ Other MOOC + Tools + etc.
 
 Slides
 --------------
-- (Introduction)[https://speakerdeck.com/eueung/kbtw-number-1]
+- [Introduction](https://speakerdeck.com/eueung/kbtw-number-1)
 - ...
 
 Mobile Computing (Komputasi Bergerak)
