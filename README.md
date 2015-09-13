@@ -1,21 +1,24 @@
-KBTW - H2/2014
+KBTW - H2/2015
 ==============
 
 EL-6240  
 **Komputasi Bergerak dan Teknologi Web**  
+**Web Technology and Mobile Computing**  
 Dr.-Ing. Eueung Mulyana
 
 
-Referensi MOOC
+Reference (MOOC)
 --------------
+- Developing Scalable Apps with Python    
+  https://www.udacity.com/course/ud858  
+
 - Developing Scalable Apps with Java    
   https://www.udacity.com/course/ud859  
 
 - Web Application Engineering - Web Development   
   https://www.udacity.com/course/cs253
 
-
-Referensi Lain + Tools + etc.
+Other MOOC + Tools + etc.
 --------------
 - Mobile Web Development : Building Mobile Web Experiences  
   https://www.udacity.com/course/cs256
@@ -27,7 +30,12 @@ Referensi Lain + Tools + etc.
 - Web Application Architectures  
   https://www.coursera.org/course/webapplications
 
-Komputasi Bergerak
+Slides
+--------------
+- (Introduction)[https://speakerdeck.com/eueung/kbtw-number-1]
+- ...
+
+Mobile Computing (Komputasi Bergerak)
 --------------
 - Model dan Arsitektur Layanan Tersambung   
   https://speakerdeck.com/eueung/ltka-02   
