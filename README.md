@@ -33,7 +33,7 @@ Other MOOC + Tools + etc.
 Slides
 --------------
 - [Introduction](https://speakerdeck.com/eueung/kbtw-number-1)
-- ...
+- [Udacity-01: Scalability](https://speakerdeck.com/eueung/kbtw-03)
 
 Mobile Computing (Komputasi Bergerak)
 --------------
