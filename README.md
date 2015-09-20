@@ -18,22 +18,13 @@ Reference (MOOC)
 - Web Application Engineering - Web Development   
   https://www.udacity.com/course/cs253
 
-Other MOOC + Tools + etc.
---------------
-- Mobile Web Development : Building Mobile Web Experiences  
-  https://www.udacity.com/course/cs256
-
-- Engineering Software as a Service  
-  https://courses.edx.org/courses/BerkeleyX/CS_CS169.1x/1T2014/info  
-  https://courses.edx.org/courses/BerkeleyX/CS.169.2x/3T2013/info
-
-- Web Application Architectures  
-  https://www.coursera.org/course/webapplications
-
 Slides
 --------------
 - [Introduction](https://speakerdeck.com/eueung/kbtw-number-1)
-- [Udacity-01: Scalability](https://speakerdeck.com/eueung/kbtw-03)
+- [cs253-01: How the Web Works](https://speakerdeck.com/eueung/kbtw-02)
+- [ud858-01: Scalability](https://speakerdeck.com/eueung/kbtw-03)
+- [ud858-02: Getting Started #1](https://speakerdeck.com/eueung/kbtw-04)
+- ...
 
 Mobile Computing (Komputasi Bergerak)
 --------------
@@ -52,4 +43,22 @@ Mobile Computing (Komputasi Bergerak)
 
 - VisionMobile  
   http://www.visionmobile.com/
+
+Tools 
+--------------
+- [Postman](https://www.getpostman.com/)
+- [httpbin](http://httpbin.org/)
+- [hurl.it](https://www.hurl.it/)
+
+Other MOOC + etc.
+--------------
+- Mobile Web Development : Building Mobile Web Experiences  
+  https://www.udacity.com/course/cs256
+
+- Engineering Software as a Service  
+  https://courses.edx.org/courses/BerkeleyX/CS_CS169.1x/1T2014/info  
+  https://courses.edx.org/courses/BerkeleyX/CS.169.2x/3T2013/info
+
+- Web Application Architectures  
+  https://www.coursera.org/course/webapplications
 
