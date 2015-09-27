@@ -4,8 +4,8 @@ KBTW - H2/2015
 EL-6240  
 **Komputasi Bergerak dan Teknologi Web**  
 **Web Technology and Mobile Computing**  
-Dr.-Ing. Eueung Mulyana
-
+Dr.-Ing. Eueung Mulyana  
+Institut Teknologi Bandung
 
 Reference (MOOC)
 --------------
@@ -24,6 +24,8 @@ Slides
 - [cs253-01: How the Web Works](https://speakerdeck.com/eueung/kbtw-02)
 - [ud858-01: Scalability](https://speakerdeck.com/eueung/kbtw-03)
 - [ud858-02: Getting Started #1](https://speakerdeck.com/eueung/kbtw-04)
+- [cs253-05-1: APIs](https://speakerdeck.com/eueung/kbtw-05-1)
+- [ud858-02: Getting Started #2](https://speakerdeck.com/eueung/kbtw-05-2)
 - ...
 
 Mobile Computing (Komputasi Bergerak)
