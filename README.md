@@ -5,7 +5,7 @@ EL-6240
 **Komputasi Bergerak dan Teknologi Web**  
 **Web Technology and Mobile Computing**  
 Dr.-Ing. Eueung Mulyana  
-Institut Teknologi Bandung  
+**Institut Teknologi Bandung**  
 eueung(-at-)stei.itb.ac.id
 
 Reference (MOOC)
@@ -28,6 +28,11 @@ Slides
 - [cs253-05-1: APIs](https://speakerdeck.com/eueung/kbtw-05-1)
 - [ud858-02: Getting Started #2](https://speakerdeck.com/eueung/kbtw-05-2)
 - [ud858-02: Getting Started #3 - Conference Central](https://speakerdeck.com/eueung/kbtw-06)
+- ...
+
+Complementary Slides
+--------------
+- [The Remarkable Journey of a Single Web Request](https://speakerdeck.com/martinisoft/the-remarkable-journey-of-a-single-web-request)
 - ...
 
 Mobile Computing (Komputasi Bergerak)
