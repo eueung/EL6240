@@ -29,6 +29,8 @@ Slides
 - [ud858-02: Getting Started #2](https://speakerdeck.com/eueung/kbtw-05-2)
 - [ud858-02: Getting Started #3 - Conference Central](https://speakerdeck.com/eueung/kbtw-06)
 - [ud858-03: Datastore](https://speakerdeck.com/eueung/kbtw-07)
+- [ud858-04.1: Advanced Datastore](https://speakerdeck.com/eueung/kbtw-08-dot-1)
+- [ud858-04.2: Advanced Datastore](https://speakerdeck.com/eueung/kbtw-08-dot-2)
 - ...
 
 Complementary Slides
