@@ -31,7 +31,7 @@ Slides
 - [ud858-03: Datastore](https://speakerdeck.com/eueung/kbtw-07)
 - [ud858-04.1: Advanced Datastore](https://speakerdeck.com/eueung/kbtw-08-dot-1)
 - [ud858-04.2: Advanced Datastore](https://speakerdeck.com/eueung/kbtw-08-dot-2)
-- ...
+- [ud858-05: Advanced App Engine Topics](https://speakerdeck.com/eueung/kbtw-09)
 
 Complementary Slides
 --------------
