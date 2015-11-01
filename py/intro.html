@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      body { font-family: 'Droid Serif'; }
+      h1, h2, h3 {
+        font-family: 'Yanone Kaffeesatz';
+        font-weight: normal;
+      }
+      .remark-code, .remark-inline-code { font-family: 'Ubuntu Mono'; }
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+
+class: center, middle, inverse
+
+# Python - Introduction
+
+### [@eueung](https://github.com/eueung) 
+### based on the material @[Codecademy](https://www.codecademy.com/learn/python)
+---
+
+# Agenda
+
+1. Introduction
+2. Deep-dive
+3. ...
+
+---
+
+# Introduction
+
+```javascript
+(function(){
+  var app = angular.module('store', ['store-products']);
+
+  app.controller('StoreController', [ '$http', function($http) {
+    var store = this;
+
+    store.products = [];
+
+    $http.get('folder/flatlander/app02_store-products.json').success(function(data){
+      store.products = data;
+    });
+  }]);
+
+  app.controller('ReviewController', function() {
+    this.review = {};
+
+*   this.addReview = function(product) {
+*     this.review.createdOn = Date.now();
+*     product.reviews.push(this.review);
+*     this.review = {};
+*   };
+  });
+
+})();
+```
+
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-0.12.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
