@@ -8,17 +8,6 @@ Dr.-Ing. Eueung Mulyana
 **Institut Teknologi Bandung**  
 eueung(-at-)stei.itb.ac.id
 
-Reference (MOOC)
---------------
-- Developing Scalable Apps with Python    
-  https://www.udacity.com/course/ud858  
-
-- Developing Scalable Apps with Java    
-  https://www.udacity.com/course/ud859  
-
-- Web Application Engineering - Web Development   
-  https://www.udacity.com/course/cs253
-
 Slides
 --------------
 - [Introduction](https://speakerdeck.com/eueung/kbtw-number-1)
@@ -33,10 +22,13 @@ Slides
 - [ud858-04.2: Advanced Datastore](https://speakerdeck.com/eueung/kbtw-08-dot-2)
 - [ud858-05: Advanced App Engine Topics](https://speakerdeck.com/eueung/kbtw-09)
 
+Python
+--------------
+- [Python Basics](http://eueung.github.io/EL6240/py) or [@speakerdeck](https://speakerdeck.com/eueung/python-intro)
+
 Complementary Slides
 --------------
 - [The Remarkable Journey of a Single Web Request](https://speakerdeck.com/martinisoft/the-remarkable-journey-of-a-single-web-request)
-- ...
 
 Mobile Computing (Komputasi Bergerak)
 --------------
@@ -61,6 +53,17 @@ Tools
 - [Postman](https://www.getpostman.com/)
 - [httpbin](http://httpbin.org/)
 - [hurl.it](https://www.hurl.it/)
+
+Reference (MOOC)
+--------------
+- Developing Scalable Apps with Python    
+  https://www.udacity.com/course/ud858  
+
+- Developing Scalable Apps with Java    
+  https://www.udacity.com/course/ud859  
+
+- Web Application Engineering - Web Development   
+  https://www.udacity.com/course/cs253
 
 Other MOOC + etc.
 --------------
