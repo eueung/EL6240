@@ -24,7 +24,8 @@ Slides
 
 Python
 --------------
-- [Python Basics](http://eueung.github.io/EL6240/py) or [@speakerdeck](https://speakerdeck.com/eueung/python-intro)
+- [Python Basics #1](http://eueung.github.io/EL6240/py) or [@speakerdeck](https://speakerdeck.com/eueung/python-intro)
+- [Python Basics #2](http://eueung.github.io/EL5244/py-tut/) or [@speakerdeck](https://speakerdeck.com/eueung/py-tut)
 
 Complementary Slides
 --------------
