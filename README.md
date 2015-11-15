@@ -26,6 +26,7 @@ Python
 --------------
 - [Python Basics #1](http://eueung.github.io/EL6240/py) or [@speakerdeck](https://speakerdeck.com/eueung/python-intro)
 - [Python Basics #2](http://eueung.github.io/EL5244/py-tut/) or [@speakerdeck](https://speakerdeck.com/eueung/py-tut)
+- [IPython & Jupyter Notebooks](http://eueung.github.io/python/ipython-intro/) or [PDF](https://speakerdeck.com/eueung/introduction-to-ipython-and-jupyter-notebooks)
 
 Complementary Slides
 --------------
