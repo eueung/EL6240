@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google App Engine - Python</title>
+    <meta charset="utf-8">
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
+      @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+      @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Open+Sans);
+
+body { font-family: 'Open Sans Condensed','Droid Serif','Open Sans', sans-serif; }
+h1, h2, h3, h4 {
+    font-family: 'Yanone Kaffeesatz';
+    font-weight: 400;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+h1 { font-size: 3.5em; }
+h2 { font-size: 3em; }
+h3 { font-size: 1.6em; }
+h4 { font-size: 1em; }
+.inverse {
+    background: #272822;
+    color: #777872;
+    text-shadow: 0 0 20px #333;
+}
+.inverse h1, .inverse h2 {
+    color: #f3f3f3;
+    line-height: 0.8em;
+}
+
+code { font-family: 'Ubuntu Mono', sans-serif !important; }
+pre code { background-color: #fff; border-top: 5px solid #ddd; border-bottom: 5px solid #ddd; margin-top: 10px;}
+h1 code { font-weight: 300; font-size: 1em !important; background-color: #eee; padding: 0px 5px; border-radius: 5px; }
+
+a {
+    color: #F92672;
+    text-decoration: none;
+}
+.task {
+    float: right;
+    font-size: 0.9em;
+    padding-top: 0.6em;
+}
+.task a {
+    color: #080;
+    text-decoration: none;
+}
+.right {
+    float: right;
+    margin-left: 1em;
+}
+.pushdown {
+    margin-top: 12em;
+}
+
+.done-true {
+  text-decoration: line-through;
+  color: grey;
+}
+
+ul.unstyled,ol.unstyled{margin-left:0;list-style:none;}
+
+.remark-visible .remark-slide-scaler {
+  overflow-y: auto;
+}
+
+.nopadding { padding:0 !important;}
+
+.red    { color: #FF4943; }
+.gray   { color: #787878; }
+.green  { color: #87A558; }
+.blue   { color: #41C8F0; }
+.yellow { color: #DBEC62; }
+.white  { color: #FFFFFF; }
+.or1 {color: #FFD740;}
+.bluelight {color: #B3E5FC;}
+.dark1 {color: #B6B6B6;}
+
+.bold { font-weight: bold; }
+
+pre {
+  background-color: transparent ; 
+  border: 0 ; 
+  border-radius: 0 ;
+  padding: 10px 0; 
+}
+.remark-code {
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.remark-code-line-highlighted {
+  font-weight: bold;
+  background-color: transparent;
+  text-shadow: 
+      0px 10px 30px rgba(255, 98, 20, .5),
+      10px 0px 30px rgba(255, 98, 20, .5),
+      -10px 0px 30px rgba(255, 98, 20, .5),
+      0px -10px 30px rgba(255, 98, 20, .5);
+}
+.reverse .remark-code-line-highlighted {
+    font-weight: normal !important;
+    color: transparent;
+    text-shadow: 0 0 5px #000;
+    font-size: 1em;
+}
+.reverse .remark-code-line { font-weight: bold; }
+
+.shade {
+    padding: 0;
+}
+
+.shade  {
+    background-color:rgba(0,0,0,0.7);
+    color: white;
+    width: 100%;
+    padding: 1em 0;
+}
+
+.shadelight  {
+    background-color:rgba(0,0,0,0.5);
+    color: white;
+    width: 100%;
+    padding: 0;
+}
+
+.fgtransparent h1 {
+  color:rgba(255,255,255,0.8) !important;
+  text-shadow: none;
+}
+
+.nosplit>div:first-of-type {width: 100%; height:100%; float:left; }
+.split-30>div:first-of-type {width: 30%; height:100%; float:left; }
+.split-30>div:nth-of-type(2) {width: 70%; height:100%; float:right;}
+.split-50>div:first-of-type {width: 50%; height:100%; float:left; }
+.split-50>div:nth-of-type(2) {width: 50%; height:100%; float:right;}
+.column_t1 {
+  background-color: #2aa9df;
+  color: white;
+}
+.column_t1 a {color: #B3E5FC;}
+.column_t1 pre code {
+  -webkit-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);  
+}
+.column_t2 {
+}
+
+.uline {text-decoration: underline;}
+
+.vmiddle {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  padding:1em;
+}
+.pushfront {
+    z-index: 2;   
+}
+.remark-slide-content .vmiddle h1 {margin-top: 0;}
+
+.boxtitle1 {
+  padding:1em;
+  text-align: left;
+  border-left: white solid 0.5em;
+  border-right: white solid 0em;
+}
+
+.figplain img {
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: #eee solid 20px;
+  border-bottom: #eee solid 20px;
+}
+.noborder img {border:none !important;}
+
+.figstyle1 img {
+  -webkit-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);  
+  width: 100%;
+}
+.figstyle1h img {
+  -webkit-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 55px 0px rgba(0,0,0,0.75);  
+  max-width: 100%;
+  max-height: 600px;
+}
+.figstyle1h {}
+
+.tab1 table {
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eeeeee;
+  margin: 0px auto;
+  border-collapse:collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.tab1 table td, .tab1 table th {
+  border: 1px solid white;
+  padding: 0.25em 1em;
+  }
+
+.tab1 table th {
+  opacity: 1;
+  background-color:#ff6600;
+  vertical-align:middle;
+} 
+.fullwidth, .fullwidth table {width: 100% !important;}
+.fullheight {max-height: 100% !important;}
+
+.tab2 table {
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eeeeee;
+  margin: 0px auto;
+  border-collapse:collapse;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.tab2 table td, .tab2 table th {
+  border: 1px solid #eee;
+  padding: 0.25em 1em;
+  }
+
+.tab2 table th {
+  opacity: 1;
+  background-color:#ff6600;
+  vertical-align:middle;
+}  
+.fonth2 {font-size: 3em;}
+
+    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://eueung.github.io/EL5244/mfizz22/font-mfizz.css">
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: split-30 nopadding
+background-image: url(https://cloud.githubusercontent.com/assets/4231611/11257863/47c745ae-8e87-11e5-9753-9d4a321766b6.jpg)
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+# <i class="icon-python fa-4x"></i>
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelight[.boxtitle1[
+# GAE - Python
+
+### [Eueung Mulyana](https://github.com/eueung)
+### http://eueung.github.io/EL6240/gae
+#### Python CodeLabs | [Attribution-ShareAlike CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+#### 
+]]
+]]
+
+---
+class: column_t1 middle
+
+.fonth2[
+.tab1.fullwidth[
+| Agenda   |
+|:-------------:|
+| GAE Basics |
+| Example - Guestbook |
+]]
+
+
+---
+class: split-30 nopadding
+background-image: url(https://cloud.githubusercontent.com/assets/4231611/11257863/47c745ae-8e87-11e5-9753-9d4a321766b6.jpg)
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+# <i class="icon-python fa-4x"></i>
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelight[.boxtitle1[
+# GAE Python Basics
+#### 
+]]
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t2[.vmiddle[
+## Getting Started
+####&nbsp;
+
+.figstyle1[
+![](images/fig01.jpg)
+]
+.center[GAE Launcher : Add New Application]
+
+
+]]
+.column_t1[.vmiddle[
+.figstyle1[
+![](images/fig02.jpg)
+]
+
+.figstyle1[
+![](images/fig03.jpg)
+]
+.center[GAE Launcher - Idle vs. Running App]
+
+
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t1[.vmiddle[
+
+.figstyle1[
+![](images/fig04.jpg)
+]
+.center[GAE Launcher -> Browse]
+
+]]
+.column_t2[.vmiddle[
+
+.figstyle1[
+![](images/fig05.jpg)
+]
+.center[GAE Launcher -> SDK Console]
+
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t2[.vmiddle[
+
+```
+import webapp2
+#----------------------------------------
+class MainHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write('Hello world!')
+#----------------------------------------
+app = webapp2.WSGIApplication([
+    ('/', MainHandler)
+], debug=True)
+```
+
+.figstyle1[
+![](images/fig06.jpg)
+]
+
+]]
+.column_t1[.vmiddle[
+## Generated Structure/Codes
+
+```yaml
+application: hello
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+```
+.center[app.yaml]
+
+]]
+
+---
+class: column_t2 middle center 
+
+.figstyle1[
+![](images/fig07.jpg)
+]
+### https://console.cloud.google.com -> Create Project 
+
+---
+class: column_t1 middle center 
+
+.figstyle1[
+![](images/fig08.jpg)
+]
+### https://console.cloud.google.com/home/dashboard 
+
+---
+class: column_t2 middle center 
+
+.figstyle1[
+![](images/fig10.jpg)
+]
+### GAE Launcher -> Dashboard 
+
+
+---
+class: split-50 nopadding 
+
+.column_t1[.vmiddle[
+## Uploading
+####&nbsp;
+
+.figstyle1[
+![](images/fig09.jpg)
+]
+.center[GAE Launcher -> Deploy]  
+
+]]
+.column_t2[.vmiddle[
+
+```yaml
+*application: hello-gae-1156
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: .*
+  script: main.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+```
+.center[app.yaml]
+
+]]
+
+---
+class: column_t2 middle center 
+
+.figstyle1[
+![](images/fig11.jpg)
+]
+### Deployed | GAE Launcher -> Dashboard  
+
+---
+class: column_t1 middle center 
+
+.figstyle1[
+![](images/fig12.jpg)
+]
+### Live - http://hello-gae-1156.appspot.com 
+
+
+
+---
+class: split-30 nopadding
+background-image: url(https://cloud.githubusercontent.com/assets/4231611/11257863/47c745ae-8e87-11e5-9753-9d4a321766b6.jpg)
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+# <i class="icon-python fa-4x"></i>
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelight[.boxtitle1[
+# Example - Guestbook
+#### 
+]]
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t2[.vmiddle[
+## A (Minimal) Guestbook
+
+```html
+<html><body>
+*An anonymous person wrote:<blockquote>test dua dua dua dua dua</blockquote>An anonymous person wrote:<blockquote>test satu</blockquote>
+
+*<form action="/sign" method="post">
+  <div><tag-textarea name="content" rows="3" cols="60"></tag-textarea></div>
+  <div><input type="submit" value="Sign Guestbook"></div>
+*</form>
+</body></html>
+```
+.center[source]
+
+]]
+.column_t1[.vmiddle[
+
+.figstyle1[
+![](images/fig13.jpg)
+]
+
+&nbsp;
+
+.figstyle1[
+![](images/fig14.jpg)
+]
+.center[Local]
+
+]]
+
+---
+class: column_t1 middle center 
+
+.figstyle1[
+![](images/fig15.jpg)
+]
+### Admin | GAE Launcher -> SDK Console 
+
+---
+class: column_t2 middle center 
+
+.figstyle1[
+![](images/fig16.jpg)
+]
+### Admin | GAE Launcher -> SDK Console 
+
+---
+class: split-50 nopadding 
+
+.column_t1[.vmiddle[
+### guestbook.py
+
+```
+import cgi
+import datetime
+import webapp2
+#---------------------------------------
+from google.appengine.ext import ndb
+from google.appengine.api import users
+#---------------------------------------
+guestbook_key = ndb.Key('Guestbook', 'default_guestbook')
+#---------------------------------------
+*class Greeting(ndb.Model):
+  author  = ndb.UserProperty()
+  content = ndb.TextProperty()
+  date    = ndb.DateTimeProperty(auto_now_add=True)
+#---------------------------------------
+*class Guestbook(webapp2.RequestHandler):
+  def post(self):
+    greeting = Greeting(parent=guestbook_key)
+
+    if users.get_current_user():
+      greeting.author = users.get_current_user()
+
+    greeting.content = self.request.get('content')
+    greeting.put()
+    self.redirect('/')
+```
+
+]]
+.column_t2[.vmiddle[
+
+```
+*class MainPage(webapp2.RequestHandler):
+  def get(self):
+    self.response.out.write('<html><body>')
+    #---------------------------------------
+    greetings = ndb.gql('SELECT * '
+                        'FROM Greeting '
+                        'WHERE ANCESTOR IS :1 '
+                        'ORDER BY date DESC LIMIT 10', guestbook_key)
+    #---------------------------------------
+    for greeting in greetings:
+      if greeting.author:
+        self.response.out.write('<b>%s</b> wrote:' % greeting.author.nickname())
+      else:
+        self.response.out.write('An anonymous person wrote:')
+      self.response.out.write('<blockquote>%s</blockquote>' % cgi.escape(greeting.content))
+    #---------------------------------------
+    self.response.out.write("""
+      <form action="/sign" method="post">
+        <div><tag-textarea name="content" rows="3" cols="60"></tag-textarea></div>
+        <div><input type="submit" value="Sign Guestbook"></div>
+      </form>
+      </body></html>""")
+#---------------------------------------
+*app = webapp2.WSGIApplication([
+* ('/', MainPage),
+* ('/sign', Guestbook)
+*], debug=True)
+```
+
+]]
+
+---
+class: split-50 nopadding 
+
+.column_t2[.vmiddle[
+
+```yaml
+*application: guestbook-test-1156
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+handlers:
+- url: .*
+* script: guestbook.app
+
+libraries:
+- name: webapp2
+  version: "2.5.2"
+```
+
+]]
+.column_t1[.vmiddle[
+### app.yaml
+
+]]
+
+---
+class: column_t1 middle center 
+
+.figstyle1[
+![](images/fig17.jpg)
+]
+### Live  
+
+---
+class: column_t2 middle center 
+
+.figstyle1[
+![](images/fig18.jpg)
+]
+### Dashboard 
+
+---
+# References
+
+1. [Hello, World! in 5 minutes - Python — Google Cloud Platform](https://cloud.google.com/appengine/docs/python/)
+1. [Introduction - Python — Google Cloud Platform](https://cloud.google.com/appengine/docs/python/gettingstartedpython27/introduction)
+
+---
+class: split-30 nopadding
+background-image: url(https://cloud.githubusercontent.com/assets/4231611/11257863/47c745ae-8e87-11e5-9753-9d4a321766b6.jpg)
+
+.column_t2.center[.vmiddle[
+.fgtransparent[
+# <i class="icon-python fa-4x"></i>
+]
+]]
+.column_t2[.vmiddle.nopadding[
+.shadelight[.boxtitle1[
+# END
+
+### [Eueung Mulyana](https://github.com/eueung)
+### http://eueung.github.io/EL6240/gae
+#### Python CodeLabs | [Attribution-ShareAlike CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+#### 
+]]
+]]
+
+
+
+    </textarea>
+    <script src="https://gnab.github.io/remark/downloads/remark-0.12.min.js">
+    </script>
+    <script>
+      var slideshow = remark.create({highlightLanguage:'python', highlightStyle: 'tomorrow', highlightLines: true});
+    </script>
+  </body>
+</html>
